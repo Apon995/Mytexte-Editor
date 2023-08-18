@@ -1,133 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My text editor !</title>
-    <!-- tailwind-cdn -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- -fontawsome-cdn- -->
-    <script
-      src="https://kit.fontawesome.com/4fe709d572.js"
-      crossorigin="anonymous"
-    ></script>
 
-    <!-- font-cdn -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,400;10..48,500;10..48,600;10..48,700&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;700;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My text editor !</title>
+  <!-- tailwind-cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- -fontawsome-cdn- -->
+  <script src="https://kit.fontawesome.com/4fe709d572.js" crossorigin="anonymous"></script>
 
-  <body
-    class="dark:bg-white min-h-screen box-border"
-    style="font-family: Bricolage Grotesque"
-  >
-    <br />
-    <br />
-    <section
-      class="md:w-4/5 w-[90%] shadow-lg min-h-fit bg-[#77b5fe] mx-auto rounded-lg z-10 py-7 overflow-auto"
-    >
-      <h1 class="text-2xl text-center text-black font-bold pb-1">
-        My Text editor !
-      </h1>
-      <div
-        class="w-[85%] overflow-hidden z-10 border-[1px] border-black h-fit mx-auto rounded-md bg-[#87CEEB]"
-      >
-        <nav
-          class="text-black flex flex-wrap gap-3 justify-evenly md:justify-between items-center py-2 px-[3%] border-b-[1px] border-black"
-        >
-          <ul class="flex space-x-2">
-            <li>
-              <i
-                class="fa-solid fa-bold cursor-pointer"
-                onclick="textBold()"
-              ></i>
-            </li>
-            <li>
-              <i
-                class="fa-solid fa-italic cursor-pointer"
-                onclick="textItalic()"
-              ></i>
-            </li>
-            <li>
-              <i
-                class="fa-solid fa-underline cursor-pointer"
-                onclick="textUnderline()"
-              ></i>
-            </li>
-          </ul>
-          <ul class="flex space-x-2">
-            <li>
-              <i
-                class="fa-solid fa-align-right cursor-pointer"
-                onclick="textRight()"
-              ></i>
-            </li>
-            <li>
-              <i
-                class="fa-solid fa-align-justify cursor-pointer"
-                onclick="textAlign()"
-              ></i>
-            </li>
-            <li>
-              <i
-                class="fa-solid fa-align-center cursor-pointer"
-                onclick="textCenter()"
-              ></i>
-            </li>
-            <li>
-              <i
-                class="fa-solid fa-align-left cursor-pointer"
-                onclick="textLeft()"
-              ></i>
-            </li>
-          </ul>
-          <ul class="flex space-x-2 items-center">
-            <input
-              type="number"
-              value="16"
-              id="font-size-select"
-              max="100"
-              min="1"
-              onchange="textvalue(this)"
-              class="w-[55px] dark:bg-white font-medium bg-current focus:outline-none px-2 py-1 text-base cursor-pointer border-none"
-            />
+  <!-- font-cdn -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,400;10..48,500;10..48,600;10..48,700&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;700;900&display=swap"
+    rel="stylesheet" />
+</head>
 
-            <input
-              type="color"
-              name="color"
-              id="color-picker"
-              value="#000"
-              class="cursor-pointer"
-              onchange="colorpic(this)"
-            />
-            <button class="btn btn-sm text-white" onclick="clearinput()">
-              Clear
-            </button>
-          </ul>
-        </nav>
-        <div class="px-3 py-3 scroll-smooth">
-          <form action="#" class="w-full">
-            <textarea
-              name="text-area"
-              id="text-input"
-              style="font-family: 'Roboto', sans-serif"
-              class="font-medium text-base outline-none w-full h-[290px] md:h-[330px] scroll-smooth px-2 md:px-4 py-4 overflow-hidden leading-normal dark:bg-white dark:text-black rounded-lg"
-            ></textarea>
-          </form>
-        </div>
+<body class="dark:bg-white min-h-screen box-border" style="font-family: Bricolage Grotesque">
+  <br />
+  <br />
+  <section class="md:w-4/5 w-[95%] shadow-lg min-h-fit bg-[#77b5fe] mx-auto rounded-lg z-10 py-7 overflow-auto">
+    <h1 class="text-2xl text-center text-black font-bold pb-1">
+      My Text editor !
+    </h1>
+    <div class="w-[90%] overflow-hidden z-10 border-[1px] border-black h-fit mx-auto rounded-md bg-[#87CEEB]">
+      <nav
+        class="text-black flex flex-wrap gap-3 justify-evenly md:justify-between items-center py-2 px-[3%] border-b-[1px] border-black">
+        <ul class="flex space-x-2">
+          <li>
+            <i class="fa-solid fa-bold cursor-pointer" onclick="textBold()"></i>
+          </li>
+          <li>
+            <i class="fa-solid fa-italic cursor-pointer" onclick="textItalic()"></i>
+          </li>
+          <li>
+            <i class="fa-solid fa-underline cursor-pointer" onclick="textUnderline()"></i>
+          </li>
+        </ul>
+        <ul class="flex space-x-2">
+          <li>
+            <i class="fa-solid fa-align-right cursor-pointer" onclick="textRight()"></i>
+          </li>
+          <li>
+            <i class="fa-solid fa-align-justify cursor-pointer" onclick="textAlign()"></i>
+          </li>
+          <li>
+            <i class="fa-solid fa-align-center cursor-pointer" onclick="textCenter()"></i>
+          </li>
+          <li>
+            <i class="fa-solid fa-align-left cursor-pointer" onclick="textLeft()"></i>
+          </li>
+        </ul>
+        <ul class="flex space-x-2 items-center relative">
+          <input type="number" value="16" id="font-size-select" max="100" min="1" onchange="textvalue(this)"
+            class="w-[55px] bg-white  font-medium  focus:outline-none px-2 py-1 text-base cursor-pointer border-none" />
+
+          <input type="color" name="color" id="color-picker"  class="cursor-pointer"
+            onchange="colorpic(this)" />
+          <a class="text-2xl px-2 cursor-pointer active:text-blue-900" onclick="copytoclipboard()">
+            <i class="fa-regular fa-copy"></i>
+          </a>
+         
+        </ul>
+      </nav>
+      <div class="px-3 pt-2 scroll-smooth">
+        <form action="#" class="w-full">
+          <textarea name="text-area" id="text-input" style="font-family: 'Roboto', sans-serif"
+            class="font-medium text-base outline-none w-full h-[350px]  md:h-[330px] px-2 md:px-4 py-4 leading-normal dark:bg-white dark:text-black rounded-lg"></textarea>
+        </form>
       </div>
-    </section>
 
-    <script src="./scriptsfile/functions.js"></script>
-    <script src="./scriptsfile/editor.js"></script>
-  </body>
+      <div class="px-3 py-2 mx-auto flex gap-2 flex-wrap  items-center justify-center md:justify-start">
+       
+
+          <button class="btn btn-sm bg-sky-950 text-white font-bold hover:bg-sky-950 " id="toggleButton" onclick="speak()" >speak</button>
+          <button class="btn btn-sm bg-sky-800 text-white font-bold hover:bg-sky-800">style</button>
+          <button class="btn btn-sm bg-blue-800 text-white font-bold hover:bg-blue-800" onclick="reversetext()">reverse</button>
+          <button class="btn btn-sm bg-blue-400 text-white font-bold hover:bg-blue-400" onclick="removespace()">remove space</button>
+          <button class="btn btn-sm bg-purple-800 text-white font-bold hover:bg-purple-800" onclick="clearinput()">clear</button>
+        
+      </div>
+    </div>
+  </section>
+
+
+  <script src="./scriptsfile/editor.js"></script>
+</body>
+
 </html>
