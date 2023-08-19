@@ -56,36 +56,40 @@
         </ul>
         <ul class="flex space-x-2 items-center relative">
           <input type="number" value="16" id="font-size-select" max="100" min="1" onchange="textvalue(this)"
-            class="w-[55px] bg-white  font-medium  focus:outline-none px-2 py-1 text-base cursor-pointer border-none" />
+            class="w-[55px] bg-white font-medium focus:outline-none px-2 py-1 text-base cursor-pointer border-none" />
 
-          <input type="color" name="color" id="color-picker"  class="cursor-pointer"
-            onchange="colorpic(this)" />
+          <input type="color" name="color" id="color-picker" class="cursor-pointer" onchange="colorpic(this)" />
           <a class="text-2xl px-2 cursor-pointer active:text-blue-900" onclick="copytoclipboard()">
             <i class="fa-regular fa-copy"></i>
           </a>
-         
         </ul>
       </nav>
       <div class="px-3 pt-2 scroll-smooth">
         <form action="#" class="w-full">
           <textarea name="text-area" id="text-input" style="font-family: 'Roboto', sans-serif"
-            class="font-medium text-base outline-none w-full h-[350px]  md:h-[330px] px-2 md:px-4 py-4 leading-normal dark:bg-white dark:text-black rounded-lg"></textarea>
+            class="font-medium text-base outline-none w-full h-[350px] md:h-[330px] px-2 md:px-4 py-4 leading-normal dark:bg-white dark:text-black rounded-lg"></textarea>
         </form>
       </div>
 
-      <div class="px-3 py-2 mx-auto flex gap-2 flex-wrap  items-center justify-center md:justify-start">
-       
-
-          <button class="btn btn-sm bg-sky-950 text-white font-bold hover:bg-sky-950 " id="toggleButton" onclick="speak()" >speak</button>
-          <button class="btn btn-sm bg-sky-800 text-white font-bold hover:bg-sky-800">style</button>
-          <button class="btn btn-sm bg-blue-800 text-white font-bold hover:bg-blue-800" onclick="reversetext()">reverse</button>
-          <button class="btn btn-sm bg-blue-400 text-white font-bold hover:bg-blue-400" onclick="removespace()">remove space</button>
-          <button class="btn btn-sm bg-purple-800 text-white font-bold hover:bg-purple-800" onclick="clearinput()">clear</button>
-        
+      <div class="px-3 py-2 mx-auto flex gap-2 flex-wrap items-center justify-center md:justify-start">
+        <button class="btn btn-sm bg-sky-950 text-white font-bold hover:bg-sky-950" onclick="speak()">
+          speak
+        </button>
+        <button class="btn btn-sm bg-sky-800 text-white font-bold hover:bg-sky-800" onclick="changeFontfamily()">
+          style
+        </button>
+        <button class="btn btn-sm bg-blue-800 text-white font-bold hover:bg-blue-800" onclick="reversetext()">
+          reverse
+        </button>
+        <button class="btn btn-sm bg-blue-400 text-white font-bold hover:bg-blue-400" onclick="removespace()">
+          remove space
+        </button>
+        <button class="btn btn-sm bg-purple-800 text-white font-bold hover:bg-purple-800" onclick="clearinput()">
+          clear
+        </button>
       </div>
     </div>
   </section>
-
 
   <script src="./scriptsfile/editor.js"></script>
 </body>
